@@ -79,3 +79,10 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+fmod_editor.log
+.vs/SoundScene/v15/Server/sqlite3/db.lock
+.vs/SoundScene/v15/Server/sqlite3/storage.ide-wal
+.vs/SoundScene/v15/Server/sqlite3/storage.ide-shm
+.vs/SoundScene/v15/Server/sqlite3/storage.ide
+fmod_editor.log
+fmod.log
