@@ -86,3 +86,6 @@ fmod_editor.log
 .vs/SoundScene/v15/Server/sqlite3/storage.ide
 fmod_editor.log
 fmod.log
+*.bank
+Assets/StreamingAssets/Master Bank.strings.bank
+Assets/StreamingAssets/MapEffects.bank.meta

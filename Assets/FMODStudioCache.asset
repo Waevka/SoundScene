@@ -14,11 +14,35 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: 114293325473555040}
   - {fileID: 114568490804219614}
-  EditorEvents: []
+  - {fileID: 114915977976621058}
+  EditorEvents:
+  - {fileID: 114078203423470230}
   MasterBankRef: {fileID: 114568490804219614}
   StringsBankRef: {fileID: 114293325473555040}
-  stringsBankWriteTime: 636513904026457207
+  stringsBankWriteTime: 636513955983127990
   cacheVersion: 2
+--- !u!114 &114078203423470230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Door
+  guid: 1bc79fabf9d1ed4dadc0838c71dc9555
+  Banks:
+  - {fileID: 114915977976621058}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2948
 --- !u!114 &114293325473555040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31,11 +55,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: F:\GitHub\SoundScene\FMODProject\SoundScene\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636513904026457207
+  lastModified: 636513955983127990
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 672
+    Value: 766
   Exists: 1
 --- !u!114 &114568490804219614
 MonoBehaviour:
@@ -49,9 +73,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: F:\GitHub\SoundScene\FMODProject\SoundScene\Build\Desktop\Master Bank.bank
-  lastModified: 636513904026437154
+  lastModified: 636513955983112950
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 12474
+  Exists: 1
+--- !u!114 &114915977976621058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: F:\GitHub\SoundScene\FMODProject\SoundScene\Build\Desktop\MapEffects.bank
+  lastModified: 636513955983328524
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 41632
   Exists: 1
