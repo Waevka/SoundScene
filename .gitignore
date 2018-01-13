@@ -89,3 +89,5 @@ fmod.log
 *.bank
 Assets/StreamingAssets/Master Bank.strings.bank
 Assets/StreamingAssets/MapEffects.bank.meta
+Assets/FMODStudioCache.asset
+Assets/StreamingAssets/Master Bank.strings.bank

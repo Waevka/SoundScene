@@ -916,3 +916,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOpen: 0
+  DoorEvent: event:/Door
