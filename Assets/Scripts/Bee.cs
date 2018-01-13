@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bee : MonoBehaviour {
 
     public float beeSpeed;
+    public float beeDelay;
     [SerializeField]
     private GameObject beeModel;
     [FMODUnity.EventRef]
@@ -14,7 +15,7 @@ public class Bee : MonoBehaviour {
     void Start () {
         BeeLoop = FMODUnity.RuntimeManager.CreateInstance(BeeEvent);
         BeeLoop.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(beeModel));
-        BeeLoop.start();
+        StartCoroutine(BeeDelay(beeDelay));
         print("Playing bee sound");
     }
 	
@@ -22,5 +23,11 @@ public class Bee : MonoBehaviour {
 	void Update () {
         gameObject.transform.Rotate(0.0f, beeSpeed, 0.0f);
         BeeLoop.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(beeModel));
+    }
+
+    private IEnumerator BeeDelay(float d)
+    {
+        yield return new WaitForSeconds(d);
+        BeeLoop.start();
     }
 }
