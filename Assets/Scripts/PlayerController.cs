@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour {
     public float walkSpeed;
     public float rotateSpeed;
     Rigidbody rb;
+    [SerializeField]
+    GameObject phone;
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
@@ -18,5 +20,15 @@ public class PlayerController : MonoBehaviour {
 
         rb.MovePosition(rb.position + rb.transform.forward * mov);
         rb.MoveRotation(Quaternion.Euler(0.0f, rb.rotation.eulerAngles.y + rot, 0.0f));
+
+        if (Input.GetButtonDown("Fire2") && !phone.activeSelf)
+        {
+            UsePhone();
+        }
 	}
+
+    void UsePhone()
+    {
+        phone.SetActive(true);
+    }
 }
