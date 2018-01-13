@@ -8,10 +8,10 @@ public class PlayerController : MonoBehaviour {
     Rigidbody rb;
     [SerializeField]
     GameObject phone;
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         rb = GetComponent<Rigidbody>();
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {

@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e874189297335534d9d3ae1a23c5a045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beeSpeed: 0.3
+  beeSpeed: 0.6
   beeModel: {fileID: 1278596297011612}
   BeeEvent: event:/Bee
 --- !u!136 &136009866362212552

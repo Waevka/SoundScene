@@ -9,10 +9,17 @@ public class OpenDoor : MonoBehaviour {
     [FMODUnity.EventRef]
     public string DoorEvent;
     FMOD.Studio.EventInstance Door;
-	// Use this for initialization
-	void Start () {
+    [FMODUnity.EventRef]
+    public string MuffledSpeechEvent;
+    FMOD.Studio.EventInstance Speech;
+
+    // Use this for initialization
+    void Start () {
         animator = GetComponent<Animator>();
-	}
+        Speech = FMODUnity.RuntimeManager.CreateInstance(MuffledSpeechEvent);
+        Speech.start();
+        print("Muffling sound");
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -27,10 +34,14 @@ public class OpenDoor : MonoBehaviour {
                 if (isOpen)
                 {
                     PlayDoorAnim("DoorClose");
+                    Speech.start();
+                    print("Muffling sound");
                 }
                 else
                 {
                     PlayDoorAnim("DoorOpen");
+                    Speech.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                    print("Stopping muffled sound");
                 }
                 isOpen = !isOpen;
             }
