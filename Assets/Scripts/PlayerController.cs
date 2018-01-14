@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour {
     Rigidbody rb;
     [SerializeField]
     GameObject phone;
+    [SerializeField]
+    Earmuffs earmuffs;
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody>();
@@ -24,6 +26,10 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetButtonDown("Fire2") && !phone.activeSelf)
         {
             UsePhone();
+        }
+        if (Input.GetButtonDown("Fire3"))
+        {
+            earmuffs.FlipEarmuffStatus();
         }
 	}
 

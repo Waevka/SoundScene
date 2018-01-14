@@ -16,14 +16,11 @@ public class Guitar : MonoBehaviour {
         lowLevelSystem = FMODUnity.RuntimeManager.LowlevelSystem;
         FMODUnity.RuntimeManager.LowlevelSystem.getMasterChannelGroup(out channelGroup);
 
-
         lowLevelSystem.createSound("Assets\\Sounds\\guitar.mp3", FMOD.MODE.DEFAULT, out guitarSong);
         string songName = "";
         guitarSong.getName(out songName, 20);
         Debug.Log("Playing song: " + songName, gameObject);
-        guitarSong.setMode(FMOD.MODE.OPENUSER | FMOD.MODE._3D | FMOD.MODE._3D_LINEARSQUAREROLLOFF);
-        
-
+        guitarSong.setMode(FMOD.MODE.OPENUSER | FMOD.MODE._3D | FMOD.MODE._3D_LINEARSQUAREROLLOFF); 
 
         lowLevelSystem.playSound(guitarSong, channelGroup, true, out channel);
         channel.set3DMinMaxDistance(minDistance, maxDistance);

@@ -77,7 +77,7 @@ public class SoundGenerator : MonoBehaviour {
             buffer[i] = sample;
             sampleNumber++;
 
-            if (sampleNumber >= sampleRate) sample = 0;
+            if (sampleNumber >= sampleRate) sampleNumber = 0;
         }
 
         Marshal.Copy(buffer, 0, data, length);
