@@ -14,7 +14,7 @@ public class Helicopter : MonoBehaviour {
         HelicopterSound = FMODUnity.RuntimeManager.CreateInstance(HelicopterEvent);
         HelicopterSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(helicopterModel));
         HelicopterSound.start();
-        print("Playing helicopter sound");
+        Debug.Log("Playing helicopter sound", gameObject);
     }
 	
 	// Update is called once per frame

@@ -16,7 +16,7 @@ public class Bee : MonoBehaviour {
         BeeLoop = FMODUnity.RuntimeManager.CreateInstance(BeeEvent);
         BeeLoop.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(beeModel));
         StartCoroutine(BeeDelay(beeDelay));
-        print("Playing bee sound");
+        Debug.Log("Playing bee sound", gameObject);
     }
 	
 	// Update is called once per frame

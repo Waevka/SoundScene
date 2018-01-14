@@ -11,7 +11,7 @@ public class Person : MonoBehaviour {
         SpeechLoop = FMODUnity.RuntimeManager.CreateInstance(SpeechEvent);
         SpeechLoop.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         SpeechLoop.start();
-        print("Playing speech loop sound");
+        Debug.Log("Playing speech loop sound", gameObject);
     }
 	
 	// Update is called once per frame
